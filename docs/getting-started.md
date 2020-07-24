@@ -31,3 +31,10 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
 ```
+
+Edit this line for your project:
+`run: apos-docs -t Apos.Input -b /Apos.Input`
+
+The `-t` option lets you define the project name to show on the sidebar.
+
+The `-b` option lets you define the subdirectory that the site will end up in. For a repository-level gh-pages deployment `[username].github.io/[repository name]`, you should set the value to `/[repository name]`.

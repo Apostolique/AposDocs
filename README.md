@@ -1,5 +1,7 @@
 # AposDocs
-Site generator for project documentation. This is meant to be used in combination with GitHub Actions
+Site generator for project documentation. This is meant to be used in combination with GitHub Actions.
+
+[![npm](https://img.shields.io/npm/v/apos-docs.svg)](https://www.npmjs.com/package/apos-docs) [![NuGet](https://img.shields.io/npm/dt/apos-docs.svg)](https://www.npmjs.com/package/apos-docs)
 
 ## Description
 Takes in a `docs` directory with your markdown files. Compiles the output into a `dist` directory. Adds the content of the `dist` directory to a `gh-pages` branch.
