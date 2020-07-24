@@ -1,0 +1,21 @@
+name: Build documentation
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - name: Use apos-docs
+      run: npm install -g
+      run: apos-docs -t AposDocs -b /AposDocs

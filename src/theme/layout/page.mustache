@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ site.base }}/styles.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body>
+    <div class="flex h-screen overflow-hidden bg-gray-950 lm:bg-gray-100">
+        {{> ./templates/sidebar }}
+        <div class="flex flex-1 mt-16 overflow-hidden md:mt-0">
+            <main
+                class="flex-1 py-0 overflow-y-auto md:py-12 focus:outline-none"
+                tabindex="0"
+            >
+                <div class="px-4 mx-auto prose lm:prose-lm max-w-7xl sm:px-6 md:px-8">
+                    {{ #isAutoTitle }}
+                    <h1>
+                        {{ title }}
+                    </h1>
+                    {{ /isAutoTitle }}
+                    {{{ body }}}
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

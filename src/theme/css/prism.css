@@ -1,0 +1,115 @@
+/* purgecss start ignore */
+.code {
+    color: #EFEFEF;
+
+    @apply relative bg-gray-980 px-0 mx-0 my-3 rounded;
+
+    &:before {
+        content: attr(lang);
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        font-size: 0.75rem;
+        color: #EFEFEF;
+    }
+
+    .line-numbers {
+        pointer-events: none;
+        font-size: 100%;
+        float: left;
+        letter-spacing: -1px;
+        border-right: 1px solid #263040;
+        user-select: none;
+        text-align: right;
+        padding-right: 0.8rem;
+        margin-right: .8rem;
+
+        > span {
+            counter-increment: linenumber;
+            @apply block;
+        }
+
+        > span:before {
+            content: counter(linenumber);
+            color: #5C6370;
+            @apply block;
+        }
+    }
+
+    .syntax {
+        position: relative;
+        z-index: 2;
+        line-height: 1.5;
+        background-color: transparent;
+        text-shadow: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 1.25rem 1.5rem;
+        white-space: pre;
+        overflow: auto;
+
+        /**
+            Fixed a weird line-height issue on Chrome/Edge android
+            https://ws1.sinaimg.cn/large/006tNc79gy1g1ypzarsesj30gu0zk76b.jpg
+        */
+        font-size: 0;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        code {
+            font-size: 0.875rem;
+        }
+    }
+
+    .comment {
+        @apply text-code-gray;
+    }
+
+    .number {
+        @apply text-code-indigo;
+    }
+
+    .directive {
+        @apply text-code-red;
+    }
+
+    .keyword {
+        @apply text-code-red;
+    }
+
+    .keyword-function,
+    .keyword-public,
+    .keyword-static,
+    .keyword-protected {
+        @apply text-code-blue;
+    }
+
+    .function {
+        @apply text-code-green;
+    }
+
+    .operator {
+        @apply text-code-red;
+    }
+
+    .string {
+        @apply text-code-yellow;
+    }
+
+    .class-name {
+        @apply text-code-orange;
+    }
+
+    .type-list {
+        .class-name {
+            @apply text-code-green;
+        }
+    }
+
+    .namespace {
+        @apply text-code-green;
+    }
+}
+/* purgecss end ignore */
