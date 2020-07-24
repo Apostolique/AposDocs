@@ -16,6 +16,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12'
-    - name: Use apos-docs
+    - name: Install apos-docs
       run: npm install -g
+    - name: Use apos-docs
       run: apos-docs -t AposDocs -b /AposDocs
