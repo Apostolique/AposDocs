@@ -102,11 +102,7 @@ module.exports = {
                },
                pre: null,
                code: null,
-               'code::before': null,
-               'code::after': null,
                'pre code': null,
-               'pre code::before': null,
-               'pre code::after': null,
                img: {
                   'margin-top': '0.5rem',
                   'margin-bottom': '0.5rem',
