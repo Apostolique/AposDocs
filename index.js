@@ -2,10 +2,8 @@
 
 process.env.NODE_ENV = 'production';
 
-const path = require('path');
 const gulp = require('gulp');
 const { program } = require('commander');
-const ghpages = require('gh-pages');
 
 program
     .name('apos-docs')
@@ -33,15 +31,5 @@ console.log('Build started.')
 if (program.development) {
     gulp.task('dev')(() => {console.log('Done build!')});
 } else {
-    gulp.task('build')(() => {
-        console.log('Done build!')
-        console.log('Publish started.');
-        ghpages.publish(path.join(process.cwd(), 'dist'), { dotfiles: true }, error => {
-            if (error) {
-                console.log(`Publish failed with error: ${error}`);
-            } else {
-                console.log('Done publish!')
-            }
-        })
-    });
+    gulp.task('build')(() => {console.log('Done build!')});
 }
