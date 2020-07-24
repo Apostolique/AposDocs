@@ -10,7 +10,7 @@ Takes in a `docs` directory with your markdown files. Compiles the output into a
 ## Tech Stack
 * [node](https://nodejs.org)
 * [gulp](https://gulpjs.com/)
-* [font-matter](https://github.com/jxson/front-matter)
+* [front-matter](https://github.com/jxson/front-matter)
 * [markdown-it](https://github.com/markdown-it/markdown-it)
 * [mustache](https://github.com/janl/mustache.js)
 * [prism](https://github.com/PrismJS/prism)
