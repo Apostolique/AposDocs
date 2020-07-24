@@ -80,6 +80,9 @@
                             href="{{ link }}"
                             class="inline-block px-2 py-2 group focus:outline-none focus:text-white"
                         >
+                            {{ #name }}
+                            <span class="sr-only">{{ name }}</span>
+                            {{ /name }}
                             {{ #svg }}
                             <svg
                                 viewBox="0 0 24 24" fill="currentColor"
