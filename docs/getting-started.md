@@ -1,8 +1,33 @@
 # Getting started
 
-Run:
+Create a `.github/workflows/documentation.yml` file with the following content:
+```yml
+name: Build documentation
 
-```
-npm install apos-docs -g
-apos-docs -t AposDocs -b /AposDocs
+on:
+  push:
+    paths:
+    - 'docs/**'
+    - 'README.md'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - name: Install apos-docs
+      run: npm install apos-docs -g
+    - name: Use apos-docs
+      run: apos-docs -t Apos.Input -b /Apos.Input
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
 ```
