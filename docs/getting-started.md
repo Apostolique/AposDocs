@@ -56,3 +56,5 @@ social:
 `links` are shown at the top. The svg is optional.
 
 `social` links are shown at the bottom, the svg is required and the name is used for screen readers or terminal browsers.
+
+Find svg icons from <https://heroicons.dev/>. Pick the *outline* version of your chosen icon.
