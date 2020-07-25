@@ -86,6 +86,10 @@
         @apply text-code-blue;
     }
 
+    .key {
+        @apply text-code-orange;
+    }
+
     .function {
         @apply text-code-green;
     }
