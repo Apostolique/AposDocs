@@ -1,5 +1,5 @@
 # AposDocs
-Site generator for project documentation. This is meant to be used in combination with GitHub Actions.
+Site generator for project documentation. This is meant to be used in combination with GitHub Pages. The final output should work with JavaScript disabled. The site should look good in terminal browsers like Lynx.
 
 [![npm](https://img.shields.io/npm/v/apos-docs.svg)](https://www.npmjs.com/package/apos-docs) [![NuGet](https://img.shields.io/npm/dt/apos-docs.svg)](https://www.npmjs.com/package/apos-docs)
 
