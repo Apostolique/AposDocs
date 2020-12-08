@@ -1,2 +1,2 @@
 # ./test/sibling.md
-Linking to [home](/).
+Linking to [home](/../../).
